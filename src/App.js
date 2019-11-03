@@ -20,7 +20,6 @@ function App() {
         <Link to='/News'>News Page</Link>{' | '}
         <Link to='/Finance'>Finance Page</Link>{' | '}
         <Link to='/Sport'>Sport Page</Link>{' | '}
-        <Link to='/Procedures'>Procedures Page</Link>{' | '}
         <Link to='/About'>About Page</Link>{' | '}
       </nav>
       <div>
@@ -33,6 +32,7 @@ function App() {
         <Route component={Errors} />
         </Switch>
       </div>
+    <Weather />
     </div>
   </Router>
   );
