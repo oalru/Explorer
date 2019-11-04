@@ -15,7 +15,6 @@ componentDidMount(){
         headers: {'X-RapidAPI-Key': '373a0f400amsh0d176c1631aeec3p194d21jsnd1559ece83af'}
     })
     .then(res => {
-
         const fixtures = res.data.api.fixtures;
         console.log(res.data);
         this.setState({
@@ -39,6 +38,5 @@ render(){
         </div>
     )
 }}
-
 
 export default Sport;

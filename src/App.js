@@ -14,6 +14,7 @@ function App() {
   return (
     <Router>
     <div className='App'>
+    <Weather />
       <nav>
         <Link to='/'>Home Page</Link>{' | '}
         <Link to='/News'>News Page</Link>{' | '}
@@ -31,7 +32,6 @@ function App() {
         <Route component={Errors} />
         </Switch>
       </div>
-    <Weather />
     </div>
   </Router>
   );
