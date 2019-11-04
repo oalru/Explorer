@@ -16,7 +16,6 @@ componentDidMount(){
     .then(res => {
         const temp = res.data.main.temp - 273.15;
         const city = res.data.name;
-        console.log(res.data)
         this.setState({
             temp: temp,
             city: city

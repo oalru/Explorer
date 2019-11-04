@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 class Sport extends Component {
@@ -12,13 +12,12 @@ componentDidMount(){
     axios({
         method: 'GET',
         url: 'https://api-football-v1.p.rapidapi.com/v2/fixtures/league/419',
-        headers: {
-        "X-RapidAPI-Key": '373a0f400amsh0d176c1631aeec3p194d21jsnd1559ece83af'
-        }
+        headers: {'X-RapidAPI-Key': '373a0f400amsh0d176c1631aeec3p194d21jsnd1559ece83af'}
     })
     .then(res => {
-        const fixtures = res.data.fixtures;
-        console.log(res.data)
+
+        const fixtures = res.data.api.fixtures;
+        console.log(res.data);
         this.setState({
             fixtures: fixtures,
         });
@@ -30,8 +29,7 @@ componentDidMount(){
 render(){
     const tt = this.state.fixtures.map((match, i )=> {
         return <div>
-            <p key={i}> {match.homeTeam.team_name}</p>{ Vs }
-        <p key={i}>{match.awayTeam.team_name}</p>
+            <p key={i}> {match.homeTeam.team_name} VS {match.awayTeam.team_name}</p>
         <p key={i}>{match.score.fulltime}</p>
         </div>
     })

@@ -8,7 +8,6 @@ import Finance from './Pages/Finance';
 import Currency from './Pages/Currency';
 import Weather from './Pages/Weather';
 import About from './Pages/About';
-import Time from './Pages/Time';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
 
 function App() {
