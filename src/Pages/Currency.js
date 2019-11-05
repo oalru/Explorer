@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Button, Container} from 'react-bootstrap'
 
 class Converter extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class Converter extends Component {
             
             const curencies = to.map((cur,i)=>{
                 
-                return <option value={cur}>{cur}</option>
+                return <option key={i} value={cur}>{cur}</option>
             })
             this.setState({
                 to: curencies
@@ -62,16 +63,21 @@ class Converter extends Component {
         });
       }
     render(){
-            return (
-                <div>
-                    <p>SAR</p>
-                    <input type="number" placeholder="Amount" value={this.state.amount} onChange={this.onTextBoxChange}/>
-                    <p>TO</p>
-                    <button onClick={this.getData}>Convert</button>
-                    <select onChange={this.choosenCur}>{this.state.to}</select>
-                    <div>{this.state.result}</div>
-                </div>
-            )}
+        return (
+            <Container>
+            <div className="converter">   
+                <p>SAR</p>
+                <Button as="input"  type="number" placeholder="Amount" value={this.state.amount} onChange={this.onTextBoxChange} />
+                <br></br>
+                <p>TO</p>
+                <br></br>
+                <select class="form-control" id="sel1" onChange={this.choosenCur}>{this.state.to}</select>
+                <br></br>
+                <Button text="white" variant="dark" onClick={this.getData}>Convert</Button>
+                <br></br>
+                <div className="results">{this.state.result}</div>
+            </div>
+            </Container>
+        )}
     }
-
     export default Converter;

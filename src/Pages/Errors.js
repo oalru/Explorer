@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Errors = (props) => {
     return(
-        <div>
-        <h1>Page Went to the Grocery</h1>
-        <h2>Sorry, Try something else</h2>
-        <Link to='/'>Click Here To Return To The Home Page</Link>
+        <div class="alert alert-warning">
+        Getting Lost ?
+        <br></br>
+        <Link to='/'>Return To The Home Page</Link>
         </div>
     );
 }

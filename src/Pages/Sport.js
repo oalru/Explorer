@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Container, Row, Col} from 'react-bootstrap'
 
 class Sport extends Component {
 constructor() {
@@ -26,10 +27,14 @@ componentDidMount(){
 }
 render(){
     const tt = this.state.fixtures.map((match, i )=> {
-        return <div>
-            <p key={i}> {match.homeTeam.team_name} VS {match.awayTeam.team_name}</p>
-        <p key={i}>{match.score.fulltime}</p>
-        </div>
+        return(
+        <Container>
+        <Row>
+          <Col className='home' key={i}>{match.homeTeam.team_name}</Col>
+          <Col key={i}>{match.score.fulltime}</Col>
+          <Col className='away' key={i}>{match.awayTeam.team_name}</Col>
+        </Row>
+      </Container>)
     })
     return (
         <div>

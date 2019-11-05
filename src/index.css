@@ -5,10 +5,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: silver;
+  background-color: rgb(163, 230, 30);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+header {
+  background-color: black;
+  font-size: 50px;
+  color: aliceblue;
+  padding: 150px;
+  margin: 0 0 50px 0;
+}
+
+.home {
+  background-color: springgreen;
+  border: 1px solid black;
+  margin: 2px;
+}
+
+.away {
+  background-color: steelblue;
+  border: 1px solid black;
+  margin: 2px;
+}
+
+.converter {
+  width: 15vw;
+  background-color: tomato;
+  margin: 5px;
+  border: 1px solid black;
+}
+
+.results {
+  border: 1px solid blick;
+  background-color: white;
+  margin: 4px 75px;
+}
+
+.curLoc {
+  float: right;
 }

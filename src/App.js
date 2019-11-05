@@ -8,20 +8,24 @@ import Finance from './Pages/Finance';
 import Currency from './Pages/Currency';
 import Weather from './Pages/Weather';
 import About from './Pages/About';
+import {Nav} from 'react-bootstrap';
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
 
 function App() {
   return (
     <Router>
     <div className='App'>
-    <Weather />
-      <nav>
-        <Link to='/'>Home Page</Link>{' | '}
-        <Link to='/News'>News Page</Link>{' | '}
-        <Link to='/Finance'>Finance Page</Link>{' | '}
-        <Link to='/Sport'>Sport Page</Link>{' | '}
-        <Link to='/About'>About Page</Link>{' | '}
-      </nav>
+      <header>-- NEWS --
+      <Weather />
+      </header>
+    
+    <Nav className='navBar' class="navbar navbar-inverse">
+        <Link to='/'>Home Page</Link>
+        <Link to='/News'>News Page</Link>
+        <Link to='/Finance'>Finance Page</Link>
+        <Link to='/Sport'>Sport Page</Link>
+        <Link to='/About'>About Page</Link>
+      </Nav>
       <div>
         <Switch>
         <Route exact path='/' component={Home} />
@@ -32,7 +36,9 @@ function App() {
         <Route component={Errors} />
         </Switch>
       </div>
+      <div className="curLoc">
       <Currency />
+      </div>
     </div>
   </Router>
   );

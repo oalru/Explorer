@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Card, Button, Container} from 'react-bootstrap'
 
 class News extends Component {
 constructor() {
@@ -24,10 +25,20 @@ componentDidMount(){
 }
 render(){
     const tt = this.state.articles.map((art, i )=> {
-        return <div>
-            <h2 key={i}> {art.title}</h2>
-        <p key={i}>{art.content}</p>
-        </div>
+        return (
+            <Container>
+        <Card border="light" bg="dark" text="white" style={{ width: '70rem' }}>
+        <Card.Img variant="top" src={art.urlToImage} />
+        <Card.Body>
+          <Card.Title key={i}>{art.title}</Card.Title>
+          <Card.Text key={i}>
+          {art.content}
+          </Card.Text>
+          <Button onClick={art.url} variant="primary">Read More</Button>
+        </Card.Body>
+      </Card>
+      </Container>
+        )
     })
     return (
         <div>
