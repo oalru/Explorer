@@ -11,12 +11,11 @@ constructor() {
 componentDidMount(){
     axios({
         method: 'GET',
-        url: 'https://api-football-v1.p.rapidapi.com/v2/fixtures/league/419',
+        url: 'https://api-football-v1.p.rapidapi.com/v2/fixtures/league/2',
         headers: {'X-RapidAPI-Key': '373a0f400amsh0d176c1631aeec3p194d21jsnd1559ece83af'}
     })
     .then(res => {
         const fixtures = res.data.api.fixtures;
-        console.log(res.data);
         this.setState({
             fixtures: fixtures,
         });

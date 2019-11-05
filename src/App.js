@@ -32,6 +32,7 @@ function App() {
         <Route component={Errors} />
         </Switch>
       </div>
+      <Currency />
     </div>
   </Router>
   );
