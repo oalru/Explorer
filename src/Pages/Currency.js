@@ -44,16 +44,16 @@ class Converter extends Component {
             console.log(res.data);
             this.setState({
                 amount: amount,
-                result: target.rates_
+                result: this.state["rate_for_amount"]
             });
             })
         .catch(err => {
             console.log(err);
         })
     }
-    aa = (e) => {
+    choosenCur = (e) => {
         this.setState({
-            target: e.target.value
+            target: e.target.value,
         })
     }
     onTextBoxChange = (e) => {
@@ -68,7 +68,7 @@ class Converter extends Component {
                     <input type="number" placeholder="Amount" value={this.state.amount} onChange={this.onTextBoxChange}/>
                     <p>TO</p>
                     <button onClick={this.getData}>Convert</button>
-                    <select onChange={this.aa}>{this.state.to}</select>
+                    <select onChange={this.choosenCur}>{this.state.to}</select>
                     <div>{this.state.result}</div>
                 </div>
             )}
