@@ -17,10 +17,8 @@ class Favorite extends Component {
               </Card.Text>
               <Button href={art.url} variant="primary">Read More</Button>
               <Button onClick={()=> this.props.removeOne(art)} variant="danger">Remove</Button>
-              
             </Card.Body>
           </Card>
-          
           </Container>
         })
 

@@ -30,7 +30,7 @@ class Finance extends Component {
                 <Card.Body>
                   <Card.Title key={i}>{news.title}</Card.Title>
                   <Card.Text key={i}>{news.text}</Card.Text>
-                  <Button onClick={news.news_url} variant="primary">Read More</Button>
+                  <Button href={news.news_url} variant="primary">Read More</Button>
                 </Card.Body>
               </Card>
               </Container>

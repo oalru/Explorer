@@ -4,7 +4,7 @@ import {Container} from 'react-bootstrap'
 const About = (props) => {
     return(
         <Container>
-            <h3>To Connect and contatct with me, please choose one of the following Methods:</h3>
+            <h3>To Reach me, please choose one of the following Channels:</h3>
             <ul>
                 <li><a href="https://www.twitter.com">Twitter</a></li>
                 <li><a href="https://www.facebook.com">Facebook</a></li>
