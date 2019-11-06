@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Button, Container} from 'react-bootstrap'
+import {Button, Container, InputGroup, FormControl, select} from 'react-bootstrap'
 
 class Converter extends Component {
     constructor(props) {
@@ -19,11 +19,8 @@ class Converter extends Component {
             headers: {'X-RapidAPI-Key': '373a0f400amsh0d176c1631aeec3p194d21jsnd1559ece83af'}
         })
         .then(res => {
-            
             const to = Object.keys(res.data.rates);
-            
             const curencies = to.map((cur,i)=>{
-                
                 return <option key={i} value={cur}>{cur}</option>
             })
             this.setState({
@@ -42,10 +39,9 @@ class Converter extends Component {
         })
         .then(res => {
             const amount = res.data.amount;
-            console.log(res.data);
             this.setState({
                 amount: amount,
-                result: this.state["rate_for_amount"]
+                result: res.data.rates[this.state.target].rate_for_amount
             });
             })
         .catch(err => {
@@ -65,13 +61,17 @@ class Converter extends Component {
     render(){
         return (
             <Container>
-            <div className="converter">   
-                <p>SAR</p>
-                <Button as="input"  type="number" placeholder="Amount" value={this.state.amount} onChange={this.onTextBoxChange} />
+                <div className="converter">
+                    <InputGroup className="mb-3">
+                        <InputGroup.Prepend>
+                            <InputGroup.Text>SAR</InputGroup.Text>
+                        </InputGroup.Prepend>
+                        <FormControl aria-label="Amount" as="input"  type="numeric" placeholder="Amount" value={this.state.amount} onChange={this.onTextBoxChange} />
+                    </InputGroup> 
+                    <br></br>
+                        <p>TO</p>
                 <br></br>
-                <p>TO</p>
-                <br></br>
-                <select class="form-control" id="sel1" onChange={this.choosenCur}>{this.state.to}</select>
+                <select className="form-control show-menu-arrow" id="sel1" onChange={this.choosenCur}>{this.state.to}</select>
                 <br></br>
                 <Button text="white" variant="dark" onClick={this.getData}>Convert</Button>
                 <br></br>

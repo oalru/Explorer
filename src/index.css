@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(163, 230, 30);
 }
 
 code {
@@ -19,6 +18,10 @@ header {
   color: aliceblue;
   padding: 150px;
   margin: 0 0 50px 0;
+}
+
+.App {
+  background-color: rgba(92, 97, 81, 0.616);
 }
 
 .home {
@@ -36,7 +39,7 @@ header {
 .converter {
   width: 15vw;
   background-color: tomato;
-  margin: 5px;
+  margin: 10px;
   border: 1px solid black;
 }
 
@@ -48,4 +51,9 @@ header {
 
 .curLoc {
   float: right;
+}
+
+.weather {
+  width: 10rem;
+  font-size: 22px;
 }

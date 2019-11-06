@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Card} from 'react-bootstrap'
 
 class Weather extends Component {
 constructor() {
@@ -26,9 +27,8 @@ componentDidMount(){
 }
 render(){
     return (
-        <div>
-            <p>{this.state.temp}</p>
-            <p>{this.state.city}</p>
+        <div className='weather'>
+            <Card bg='dark'>{this.state.city}   {this.state.temp}°C</Card>
         </div>
     )
 }}
