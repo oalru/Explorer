@@ -10,7 +10,7 @@ import Weather from './Pages/Weather';
 import About from './Pages/About';
 import Favorite from './Pages/Favorite';
 import {Nav} from 'react-bootstrap';
-import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom'
+import {BrowserRouter as HashRouter, Route, Link, Switch} from 'react-router-dom'
 
 class App extends React.Component {
   constructor(props){
@@ -43,7 +43,7 @@ class App extends React.Component {
 
   render(){
   return (
-    <Router>
+    <HashRouter basename="/">
     <div className='App'>
       <header>
         <h1>-- Explorer --</h1>
@@ -72,7 +72,7 @@ class App extends React.Component {
       <Currency />
       </div>
     </div>
-  </Router>
+  </HashRouter>
   );
   }
 }
