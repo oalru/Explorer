@@ -6,6 +6,8 @@ A single Page web application that shows news from diffrent categories such as: 
 
 The goal of this project is to build an application using REACT and use some API's and do some intermediate coding.
 
+## **[Wireframe](https://wireframe.cc/pro/pp/83e700ddd286451)**
+
 ## Technologies Used:
 
 * Command Lines
@@ -36,8 +38,6 @@ The goal of this project is to build an application using REACT and use some API
 
 * The ability to stock prices bar below the nav bar.
 * The ability to choose the currency i want to convert from.
-
-
 
 
 
