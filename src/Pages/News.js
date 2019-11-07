@@ -28,7 +28,7 @@ componentDidMount(){
 render(){   
     const tt = this.state.articles.map((art, i )=> {
         return (
-            <Container key={i}>
+            <Container className="art" key={i}>
         <Card border="light" bg="dark" text="white" style={{ width: '70rem' }}>
         <Card.Img variant="top" src={art.urlToImage} />
         <Card.Body>

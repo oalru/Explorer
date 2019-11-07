@@ -35,10 +35,11 @@ class App extends React.Component {
     })
   }
 
-  cleaAllClick = () => {
+  cleaAllClick = (require) => {
+    console.log(require)
     this.setState({
       mylist: []
-    })
+    });
   }
 
   render(){
@@ -46,30 +47,33 @@ class App extends React.Component {
     <HashRouter basename="/">
     <div className='App'>
       <header>
+        <div>
         <h1>-- Explorer --</h1>
-      
+      <div className='weather'>
       <Weather />
-      
+      </div>
+      </div>
       </header>
-    <Nav className="navbar navbar-inverse">
-        <Link to='/'>Home Page</Link>
-        <Link to='/News'>News Page</Link>
-        <Link to='/Finance'>Finance Page</Link>
-        <Link to='/Sport'>Sport Page</Link>
-        <Link to='/About'>About Page</Link>
-        <Link to='/Favorite'>Favorite Page</Link>
+    <Nav bg="light" variant="dark" className="navbar navbar-inverse">
+        <Link to='/'>Home </Link>
+        <Link to='/News'>General News</Link>
+        <Link to='/Finance'>Economy News</Link>
+        <Link to='/Sport'>Premier League</Link>
+        <Link to='/Converter'>Currency Converter</Link>
+        <Link to='/Favorite'>Favorite Articles</Link>
+        <Link to='/About'>About Us</Link>
       </Nav>
       <div>
         <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/News' component={()=> <News addToFavorate={this.addToFavorate} />} />
-        <Route path='/About' component={About} />
-        <Route path='/Finance' component={Finance} />
-        <Route path='/Sport' component={Sport} />
-        <Route path='/Favorite' component={()=>  <Favorite clearAll={this.cleaAllClick} removeOne={this.removeOne} mylist={this.state.mylist} />} />
-        <Route component={Errors} />
+        <Route className='link' exact path='/' component={Home} />
+        <Route className='link' path='/News' component={()=> <News addToFavorate={this.addToFavorate} />} />
+        <Route className='link' path='/Finance' component={Finance} />
+        <Route className='link' path='/Sport' component={Sport} />
+        <Route className='link' path='/Converter' component={Currency} />
+        <Route className='link' path='/Favorite' component={()=>  <Favorite clearAll={this.cleaAllClick} removeOne={this.removeOne} mylist={this.state.mylist} />} />
+        <Route className='link' path='/About' component={About} />
+        <Route className='link' component={Errors} />
         </Switch>
-      <Currency />
       </div>
     </div>
   </HashRouter>

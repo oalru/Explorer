@@ -24,7 +24,7 @@ class Finance extends Component {
     render(){
         const tt = this.state.articles.map((news, i)=> {
             return (
-                <Container>
+                <Container className="art">
                 <Card border="light" bg="dark" text="white" style={{ width: '70rem' }}>
                 <Card.Img variant="top" src={news.image_url} />
                 <Card.Body>

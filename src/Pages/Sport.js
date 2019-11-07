@@ -29,6 +29,14 @@ render(){
     const tt = this.state.fixtures.map((match, i )=> {
         return(
         <Container>
+             <Row>
+          <Col className="pL">Premiere League</Col>
+        </Row>
+        <Row className="homeAway">
+          <Col>Home</Col>
+          <Col>Score</Col>
+          <Col>Away</Col>
+        </Row>
         <Row>
           <Col className='home' key={i}>{match.homeTeam.team_name}</Col>
           <Col key={i}>{match.score.fulltime}</Col>
@@ -37,7 +45,7 @@ render(){
       </Container>)
     })
     return (
-        <div>
+        <div className="art">
             {tt}
         </div>
     )

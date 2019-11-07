@@ -6,7 +6,7 @@ const Errors = (props) => {
         <div className="alert alert-warning">
         Getting Lost ?
         <br></br>
-        <Link to='/'>Return To The Home Page</Link>
+        <Link to='/'>Return To Home Page</Link>
         </div>
     );
 }

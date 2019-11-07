@@ -62,6 +62,8 @@ class Converter extends Component {
         return (
             <Container>
                 <div className="converter">
+                    <div className='curHead'>Currency Converter</div>
+                    <br></br>
                     <InputGroup className="mb-3">
                         <InputGroup.Prepend>
                             <InputGroup.Text>SAR</InputGroup.Text>

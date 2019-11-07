@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import {Button, Container, Card} from 'react-bootstrap';
 
 class Favorite extends Component {
-
-    
     render () {
-
         const lists = this.props.mylist.map((art,i)=> {
-            return <Container key={i}>
+            return <Container className="art" key={i}>
             <Card border="light" bg="dark" text="white" style={{ width: '70rem' }}>
             <Card.Img variant="top" src={art.urlToImage} />
             <Card.Body>
@@ -21,20 +18,13 @@ class Favorite extends Component {
           </Card>
           </Container>
         })
-
         return(
             <div>
-        
         {lists}
-        <Button onClick={()=> this.cleaAllClick()}>Clear All</Button>
-
+        <Button variant="dark" onClick={this.props.clearAllClick}>Clear All</Button>
         </div>
-        )
-
-        
+        )   
     }
 }
-
-
 
 export default Favorite;

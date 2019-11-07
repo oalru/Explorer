@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: blue
 }
 
 code {
@@ -14,33 +15,37 @@ code {
 
 header {
   background-color: black;
-  font-size: 50px;
+  font-size: 33px;
   color: aliceblue;
   padding: 150px;
   margin: 0 0 50px 0;
 }
 
 .App {
-  background-color: rgba(92, 97, 81, 0.616);
+  background-color: rgba(231, 231, 231, 0.938);
 }
 
 .home {
-  background-color: springgreen;
+  background-color: rgb(133, 128, 128);
   border: 1px solid black;
+  border-radius: 5px;
   margin: 2px;
 }
 
 .away {
   background-color: steelblue;
   border: 1px solid black;
+  border-radius: 5px;
   margin: 2px;
 }
 
 .converter {
-  width: 15vw;
-  background-color: tomato;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  background-color: rgb(93, 90, 90);
   margin: 10px;
   border: 1px solid black;
+  border-radius: 10px;
 }
 
 .results {
@@ -49,11 +54,42 @@ header {
   margin: 4px 75px;
 }
 
-.curLoc {
-  float: right;
+.navbar {
+  background-color: rgb(61, 59, 63);
+  color: white;
 }
 
 .weather {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 10rem;
   font-size: 22px;
+  font-size: 26px;
 }
+
+.curHead {
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.home {
+  height: 100%;
+  width: 100%;
+}
+
+.homeAway {
+  color: aliceblue;
+  background-color: black;
+}
+
+.pL {
+  color: black;
+  background-color: darkgoldenrod;
+  }
+
+  .art {
+    margin-top: 75px;
+  }
