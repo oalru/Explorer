@@ -36,8 +36,8 @@ The goal of this project is to build an application using REACT and use some API
 
 ## Additional features might be added in the future:
 
-* The ability to stock prices bar below the nav bar.
-* The ability to choose the currency i want to convert from.
+* The ability to see stock prices bar below the nav bar.
+* The ability to choose the currency I want to convert from.
 
 
 
