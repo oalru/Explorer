@@ -18,6 +18,7 @@ The goal of this project is to build an application using REACT and use some API
 * GitHub
 * React
 * Axios
+* React Router
 * Bootstrap
 * React Bootstap
 * AJAX
