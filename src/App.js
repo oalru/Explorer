@@ -45,7 +45,7 @@ class App extends React.Component {
   render(){
   return (
     <HashRouter basename="/">
-    <div className='App'>
+    <div className='App home'>
       <header>
         <div>
         <h1>-- Explorer --</h1>
@@ -54,7 +54,7 @@ class App extends React.Component {
       </div>
       </div>
       </header>
-    <Nav bg="light" variant="dark" className="navbar navbar-inverse">
+    <Nav bg="light" variant="light" className="navbar navbar-inverse">
         <Link to='/'>Home </Link>
         <Link to='/News'>General News</Link>
         <Link to='/Finance'>Economy News</Link>

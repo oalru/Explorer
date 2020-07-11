@@ -10,11 +10,10 @@ The goal of this project is to build an application using REACT and use some API
 
 ## Technologies Used:
 
-* Command Lines
+
 * HTML
 * CSS
 * JavaScript
-* Visual Studio Code
 * GitHub
 * React
 * Axios
@@ -23,8 +22,6 @@ The goal of this project is to build an application using REACT and use some API
 * React Bootstap
 * AJAX
 * XML
-* [W3Schools](https://www.w3schools.com/)
-* [StackOverflow](https://stackoverflow.com/)
 
 
 ## User Requirment:
@@ -42,4 +39,4 @@ The goal of this project is to build an application using REACT and use some API
 
 
 
-Try The Demo By **[Clicking Here](https://oalru.github.io/Explorer/)**
+Try The Demo By **[Clicking Here](https://oalru.github.io/Explorer)**
