@@ -11,6 +11,7 @@ import Favorite from './Pages/Favorite';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import {BrowserRouter as HashRouter, Route, Switch} from 'react-router-dom'
+import { Container } from 'react-bootstrap';
 
 class App extends React.Component {
 constructor(props){
@@ -35,7 +36,7 @@ removeOne = (rt)=> {
   })
 }
 
-cleaAllClick = (require) => {
+clearAllClick = (require) => {
   console.log(require)
   this.setState({
     mylist: []
@@ -44,7 +45,7 @@ cleaAllClick = (require) => {
 
 render(){
 return (
-  <HashRouter basename="/">
+  <HashRouter>
     <Navbar bg="dark" variant="dark" className='navbar'>
   <Navbar.Brand >Explorer</Navbar.Brand>
   <Nav className="mr-auto">
@@ -58,16 +59,19 @@ return (
   </Nav>
     <Weather />
     </Navbar>
+    <br/>
+    <Container Fluid>
       <Switch>
-      <Route className='link' exact path='/' component={Home} />
-      <Route className='link' path='/News' component={()=> <News addToFavorate={this.addToFavorate} />} />
-      <Route className='link' path='/Finance' component={Finance} />
-      <Route className='link' path='/Sport' component={Sport} />
-      <Route className='link' path='/Converter' component={Currency} />
-      <Route className='link' path='/Favorite' component={()=>  <Favorite clearAll={this.cleaAllClick} removeOne={this.removeOne} mylist={this.state.mylist} />} />
-      <Route className='link' path='/About' component={About} />
-      <Route className='link' component={Errors} />
+      <Route exact path='/' component={Home} />
+      <Route path='/News' component={()=> <News addToFavorate={this.addToFavorate} />} />
+      <Route path='/Finance' component={Finance} />
+      <Route path='/Sport' component={Sport} />
+      <Route path='/Converter' component={Currency} />
+      <Route path='/Favorite' component={()=>  <Favorite clearAll={this.clearAllClick} removeOne={this.removeOne} mylist={this.state.mylist} />} />
+      <Route path='/About' component={About} />
+      <Route component={Errors} />
       </Switch>
+</Container>
   
 </HashRouter>
 );

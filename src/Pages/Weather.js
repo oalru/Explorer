@@ -27,9 +27,9 @@ componentDidMount(){
 }
 render(){
     return (
-        <div>
+        
             <Card bg='dark'>{this.state.city}   {this.state.temp}°C</Card>
-        </div>
+        
     )
 }}
 
