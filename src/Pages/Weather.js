@@ -11,7 +11,7 @@ constructor() {
     };
 }
 componentDidMount(){
-    axios.get('http://api.openweathermap.org/data/2.5/weather?q=Riyadh&APPID=17fb5fb0eaaf777fa63a9d3ce7daa9c6')
+    axios.get('https://api.openweathermap.org/data/2.5/weather?q=Riyadh&APPID=17fb5fb0eaaf777fa63a9d3ce7daa9c6')
     .then(res => {
         const temp = res.data.main.temp - 273.15;
         const city = res.data.name;
@@ -27,7 +27,7 @@ componentDidMount(){
 }
 render(){
     return (
-        <div className='weather'>
+        <div>
             <Card bg='dark'>{this.state.city}   {this.state.temp}°C</Card>
         </div>
     )

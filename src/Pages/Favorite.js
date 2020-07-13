@@ -3,17 +3,17 @@ import {Button, Container, Card} from 'react-bootstrap';
 
 class Favorite extends Component {
     render () {
-        const lists = this.props.mylist.map((art,i)=> {
-            return <Container className="art" key={i}>
+        const lists = this.props.mylist.map((article,i)=> {
+            return <Container  key={i}>
             <Card border="light" bg="dark" text="white" style={{ width: '70rem' }}>
-            <Card.Img variant="top" src={art.urlToImage} />
+            <Card.Img variant="top" src={article.urlToImage} />
             <Card.Body>
-              <Card.Title >{art.title}</Card.Title>
+              <Card.Title >{article.title}</Card.Title>
               <Card.Text >
-              {art.content}
+              {article.content}
               </Card.Text>
-              <Button href={art.url} variant="primary">Read More</Button>
-              <Button onClick={()=> this.props.removeOne(art)} variant="danger">Remove</Button>
+              <Button href={article.url} variant="primary">Read More</Button>
+              <Button onClick={()=> this.props.removeOne(article)} variant="danger">Remove</Button>
             </Card.Body>
           </Card>
           </Container>
