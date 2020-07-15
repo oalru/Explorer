@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Card, Button, Container } from "react-bootstrap";
+import { Card, Button, Container, CardDeck } from "react-bootstrap";
 
 class Finance extends Component {
   constructor() {
@@ -38,22 +38,24 @@ class Finance extends Component {
   render() {
     const tt = this.state.articles.map((news, i) => {
       return (
-        <Container>
-          <Card
-            border="light"
-            bg="dark"
-            text="white"
-            style={{ width: "70rem" }}
+        <Container style={{ width: "50rem" }}>
+          <br />
+          <CardDeck>
+          <Card  key={i}
           >
-            <Card.Img variant="top" src={news.media} />
+              <Card.Title>{news.title}</Card.Title>
+            <Card.Img src={news.media} />
             <Card.Body>
-              <Card.Title key={i}>{news.title}</Card.Title>
-              <Card.Text key={i}>{news.summary}</Card.Text>
+              <Card.Text>{news.summary}</Card.Text>
+            </Card.Body>
+              <Card.Footer>
               <Button href={news.link} variant="primary">
                 Read More
               </Button>
-            </Card.Body>
+              </Card.Footer>
           </Card>
+          </CardDeck>
+          <br />
         </Container>
       );
     });

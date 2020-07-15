@@ -32,15 +32,16 @@ class News extends Component {
           <br />
           <CardDeck>
             <Card key={i}>
+                <Card.Title>{article.title}</Card.Title>
               <Card.Img src={article.urlToImage} />
               <Card.Body>
-                <Card.Title>{article.title}</Card.Title>
                 <Card.Text>{article.content}</Card.Text>
               </Card.Body>
               <Card.Footer>
                 <Button href={article.url} variant="primary">
                   Read More
                 </Button>
+                {' '}
                 <Button
                   onClick={(e) => {
                     e.preventDefault();

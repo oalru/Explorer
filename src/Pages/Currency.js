@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Button, Container, InputGroup, FormControl} from 'react-bootstrap'
+import {Button, Card, InputGroup, FormControl} from 'react-bootstrap'
 
 class Converter extends Component {
     constructor(props) {
@@ -48,7 +48,7 @@ class Converter extends Component {
             console.log(err);
         })
     }
-    choosenCurrency = (e) => {
+    choosenCur = (e) => {
         this.setState({
             target: e.target.value,
         })
@@ -60,26 +60,27 @@ class Converter extends Component {
       }
     render(){
         return (
-            <Container>
-               
-                    <div className='curHead'>Currency Converter</div>
-                    <br></br>
+            <Card className="text-center" bg="dark" text="light" style={{ width: '10rem' }}>
+                   
+                    <Card.Title >Currency Exchange rate</Card.Title>
+                   
                     <InputGroup className="mb-3">
                         <InputGroup.Prepend>
                             <InputGroup.Text>SAR</InputGroup.Text>
                         </InputGroup.Prepend>
                         <FormControl aria-label="Amount" as="input"  type="numeric" placeholder="Amount" value={this.state.amount} onChange={this.onTextBoxChange} />
                     </InputGroup> 
-                    <br></br>
-                        <p>TO</p>
-                <br></br>
-                <select className="form-control show-menu-arrow" id="sel1" onChange={this.choosenCurrency}>{this.state.to}</select>
-                <br></br>
-                <Button text="white" variant="dark" onClick={this.getData}>Convert</Button>
-                <br></br>
-                <div className="results">{this.state.result}</div>
+                   
+                        <Card.Text>TO</Card.Text>
+               
+                
+                <select className="form-control show-menu-arrow" id="sel1" onChange={this.choosenCur}>{this.state.to}</select>
+               <br></br>
+                <Button text="white" variant="light" onClick={this.getData}>Convert</Button>
+               <br></br>
+                <Card.Footer>{this.state.result}</Card.Footer>
        
-            </Container>
+            </Card>
         )}
     }
     export default Converter;
