@@ -45,7 +45,7 @@ clearAllClick = (require) => {
 render(){
 return (
   <HashRouter>
-    <Navbar bg="dark" variant="dark" className='navbar'>
+    <Navbar className='navbar navbar-expand-md navbar-dark bg-dark' >
   <Navbar.Brand >Explorer</Navbar.Brand>
   <Nav className="mr-auto">
     <Nav.Link href="/">Home</Nav.Link>
