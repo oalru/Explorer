@@ -5,24 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: blue
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-header {
-  background-color: black;
-  font-size: 33px;
-  color: aliceblue;
-  padding: 150px;
-  margin: 0 0 50px 0;
-}
-
-.App {
-  background-color: rgba(231, 231, 231, 0.938);
 }
 
 .home {
@@ -55,18 +42,9 @@ header {
 }
 
 .navbar {
-  background-color: rgb(61, 59, 63);
   color: white;
 }
 
-.weather {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 10rem;
-  font-size: 22px;
-  font-size: 26px;
-}
 
 .curHead {
   background-color: aliceblue;
@@ -88,8 +66,4 @@ header {
 .pL {
   color: black;
   background-color: darkgoldenrod;
-  }
-
-  .art {
-    margin-top: 75px;
   }

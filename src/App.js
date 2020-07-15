@@ -63,12 +63,12 @@ return (
     <Container Fluid>
       <Switch>
       <Route exact path='/' component={Home} />
-      <Route path='/News' component={()=> <News addToFavorate={this.addToFavorate} />} />
-      <Route path='/Finance' component={Finance} />
-      <Route path='/Sport' component={Sport} />
-      <Route path='/Converter' component={Currency} />
-      <Route path='/Favorite' component={()=>  <Favorite clearAll={this.clearAllClick} removeOne={this.removeOne} mylist={this.state.mylist} />} />
-      <Route path='/About' component={About} />
+      <Route exact path='/News' component={()=> <News addToFavorate={this.addToFavorate} />} />
+      <Route exact path='/Finance' component={Finance} />
+      <Route exact path='/Sport' component={Sport} />
+      <Route exact path='/Converter' component={Currency} />
+      <Route exact path='/Favorite' component={()=>  <Favorite clearAll={this.clearAllClick} removeOne={this.removeOne} mylist={this.state.mylist} />} />
+      <Route exact path='/About' component={About} />
       <Route component={Errors} />
       </Switch>
 </Container>

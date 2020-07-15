@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Button, Container, InputGroup, FormControl, select} from 'react-bootstrap'
+import {Button, Container, InputGroup, FormControl} from 'react-bootstrap'
 
 class Converter extends Component {
     constructor(props) {
@@ -48,7 +48,7 @@ class Converter extends Component {
             console.log(err);
         })
     }
-    choosenCur = (e) => {
+    choosenCurrency = (e) => {
         this.setState({
             target: e.target.value,
         })
@@ -61,7 +61,7 @@ class Converter extends Component {
     render(){
         return (
             <Container>
-                <div className="converter">
+               
                     <div className='curHead'>Currency Converter</div>
                     <br></br>
                     <InputGroup className="mb-3">
@@ -73,12 +73,12 @@ class Converter extends Component {
                     <br></br>
                         <p>TO</p>
                 <br></br>
-                <select className="form-control show-menu-arrow" id="sel1" onChange={this.choosenCur}>{this.state.to}</select>
+                <select className="form-control show-menu-arrow" id="sel1" onChange={this.choosenCurrency}>{this.state.to}</select>
                 <br></br>
                 <Button text="white" variant="dark" onClick={this.getData}>Convert</Button>
                 <br></br>
                 <div className="results">{this.state.result}</div>
-            </div>
+       
             </Container>
         )}
     }
