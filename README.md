@@ -39,4 +39,4 @@ The goal of this project is to build an application using REACT and use some API
 
 
 
-Try The Demo By **[Clicking Here](https://oalru.github.io/Explorer)**
+Try The Demo By **[Clicking Here](https://explorernews.netlify.app/)**
